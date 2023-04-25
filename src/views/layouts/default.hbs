@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="shareseye">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>shareseye</title>
+    <meta name="author" content="shareseye" />
+    <meta name="description" content="" />
+    <meta name="robots" content="">
+    <meta name="keywords" content="" />
+    <meta property="og:title" content="shareseye" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="shareseye" />
+    <meta property="og:image" content="shareseye" />
+    <meta property="og:description" content="shareseye">
+    <meta property="og:site_name" content="shareseye">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/material-dashboard-v1.2.1.css" />
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome-5.9.0.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/material-icons.css" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    {{#each links}}
+    <link rel="stylesheet" type="text/css" href="{{this.href}}" />
+    {{/each}}
+    <script type="text/javascript">
+      document.addEventListener('contextmenu', event => event.preventDefault());
+      {{#if ___notify}}
+      window.___notify = {{{json ___notify}}};
+      {{/if}}
+      {{#if ___data}}
+      window.___data = {{{json ___data}}};
+      {{/if}}
+    </script>
+  </head>
+  {{{body}}}
+  <script type="text/javascript" src="/js/lodash.js"></script>
+  <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/material.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="/js/moment.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap-notify.js"></script>
+  <script type="text/javascript" src="/js/bootstrap-datetimepicker.js"></script>
+  <script type="text/javascript" src="/js/jquery.select-bootstrap.js"></script>
+  <script type="text/javascript" src="/js/material-dashboard-v1.2.1.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
+  {{#each scripts}}
+  <script type="text/javascript" src="{{this.src}}"></script>
+  {{/each}}
+</html>
